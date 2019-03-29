@@ -16,8 +16,10 @@ steps:
     PASSWORD:
       from_secret: DH_PASS
   commands:
-    - apk add --no-cache make
-    - make build
+    - ls
+    - pwd
+    #- apk add --no-cache make
+    #- make build
     #- make push
   volumes:
     - name: docker
