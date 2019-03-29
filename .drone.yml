@@ -7,16 +7,13 @@ platform:
   arch: arm64
 
 steps:
-- name: build_and_push
-  image: docker:18.06-dind
-  environment:
-    USERNAME:
+- name: publish_image
+    image: plugins/docker
+  settings:
+    repo: jmreicha/light-baseimage
+    tags: arm64
+    dockerfile: image/Dockerfile
+    username:
       from_secret: DH_USER
-    PASSWORD:
+    password:
       from_secret: DH_PASS
-  commands:
-    - ls
-    - pwd
-    #- apk add --no-cache make
-    #- make build
-    #- make push
