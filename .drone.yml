@@ -10,5 +10,6 @@ steps:
 - name: build_and_push
   image: ubuntu
   commands:
+    - apt-get update && apt-get install -y make
     - make build
     - make push
