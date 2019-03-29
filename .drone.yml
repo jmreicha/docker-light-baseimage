@@ -9,7 +9,7 @@ platform:
 steps:
 - name: build_and_push
   image: docker:18.06-dind
-  priviliged: true
+  privileged: true
   commands:
     - apk add --no-cache make
     - make build
