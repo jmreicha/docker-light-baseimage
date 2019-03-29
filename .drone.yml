@@ -1,0 +1,14 @@
+---
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: arm64
+  
+steps:
+- name: build_and_push
+  image: ubuntu
+  commands:
+    - make build
+    - make push
