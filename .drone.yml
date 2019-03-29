@@ -8,7 +8,7 @@ platform:
 
 steps:
 - name: publish_image
-    image: plugins/docker
+  image: plugins/docker
   settings:
     repo: jmreicha/light-baseimage
     tags: arm64
