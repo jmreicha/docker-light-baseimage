@@ -13,6 +13,7 @@ steps:
     repo: jmreicha/light-baseimage
     tags: arm64
     dockerfile: image/Dockerfile
+    context: image
     username:
       from_secret: DH_USER
     password:
