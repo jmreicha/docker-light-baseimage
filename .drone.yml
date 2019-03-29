@@ -9,7 +9,6 @@ platform:
 steps:
 - name: build_and_push
   image: docker:18.06-dind
-  privileged: true
   environment:
     USERNAME:
       from_secret: DH_USER
@@ -21,11 +20,3 @@ steps:
     #- apk add --no-cache make
     #- make build
     #- make push
-  volumes:
-    - name: docker
-      path: /var/run/docker.sock
-
-volumes:
-- name: docker
-  host:
-    path: /var/run/docker.sock
