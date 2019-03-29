@@ -5,7 +5,7 @@ name: default
 platform:
   os: linux
   arch: arm64
-  
+
 steps:
 - name: build_and_push
   image: docker:18.06-dind
@@ -18,7 +18,7 @@ steps:
   commands:
     - apk add --no-cache make
     - make build
-    - make push
+    #- make push
   volumes:
     - name: docker
       path: /var/run/docker.sock
